@@ -1,0 +1,21 @@
+font = {
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@800&family=Crimson+Text:wght@400;700&family=Sanchez&display=swap" rel="stylesheet">
+	/////////////
+
+	font-family: 'Cinzel', serif;
+	font-family: 'Crimson Text', serif;
+	font-family: 'Sanchez', serif;
+	
+}
+
+colors = {
+
+	white : #ffffff
+	black : #000000
+	gray : #e5e5e5
+	darkBlue : #14213d
+	orange : #fca311
+}
