@@ -1,16 +1,14 @@
-import ProductSection from "./Components/other/ProductSection";
-import SwiperComp from "./Components/other/Swiper";
-import Footer from "./Components/static/Footer";
+import { Routes, Route } from "react-router-dom"
+import Home from "./Pages/Home"
+
 
 
 function App() {
 
   return (
-    <>
-      <SwiperComp />
-      <ProductSection />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   )
 }
 

@@ -10,6 +10,9 @@ const Product = (props : ProductCard) => {
     <div className="product-card">
         <div className="product-img">
             <img src={props.imgURL} alt={props.name} width="100%" />
+            <div className="content">
+              <img src="/icons/cart.png" alt="cart" />
+            </div>
         </div>
         <h2>{props.name}</h2>
         <span>{props.price}$</span>

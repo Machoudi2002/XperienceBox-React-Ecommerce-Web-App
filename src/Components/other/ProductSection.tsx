@@ -1,4 +1,5 @@
 import Product from "./Product"
+import "./CSS/ProductSection.scss"
 
 const productInfo = [
     {
@@ -25,7 +26,7 @@ const ProductSection = () => {
   return (
     <>
         <section className="product-section container">
-            <h1 className="text-center mt-4 mb-4">Featured Products</h1>
+            <h1>Featured Products</h1>
             <div className="products mt-5 mb-5">
                 {
                     productInfo.map((item, i) => (

@@ -8,6 +8,7 @@
 :root {
   --darkblue: #14213d;
   --gray: #e5e5e5;
+  --orange: #fca311;
 }
 
 .swiper-pagination-bullet-active {
@@ -21,153 +22,32 @@
 }
 
 
-/////////////////////////////////////////////////////// Header Section //////////////////////////////////////////////////////////////////
 
-header {
-  padding: 15px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column-reverse;
-
-  .text-area {
-    margin-bottom: 70px;
-
-    h1 {
-      font-family: 'Cinzel', serif;
-      font-size: clamp(1.5rem, 10vw, 4.5rem);
-      
-      
-    }
-    
-    h2 {
-      font-family: 'Crimson Text', serif;
-      font-weight: 600;
-      font-size: 25px;
-    }
-    
-    p {
-      font-family: 'Sanchez', serif;
-      font-size: 14px;
-    }
-
-    .link-btn {
-      margin-top: 20px;
-      a {
-        text-decoration: none;
-        color: black;
-        font-family: 'Cinzel', serif;
-        font-weight: 600;
-        border: solid 2px black;
-        font-size: 18px;
-        padding: 8px 15px;
-        transition: 0.3s linear;
-    
-        &:hover {
-          color: aliceblue;
-          background-color: black;
-        }
-      }
-
-    } 
-  
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+} 
+@media (min-width: 576px) {
+  .container {
+      width: 540px;
   }
 }
-
-
-/////////////////////////////////////////////////////////// Features Products //////////////////////////////////////////////////////////////
-
-.product-section {
-  font-family: 'Cinzel', serif;
-
-  .products {
-    display: grid;
-    gap: 20px;
-
-    .product-card {
-      cursor: pointer;
-      transition: 0.2s linear;
-      .product-img {
-        background-color: var(--gray);
-        border-radius: 3px;
-        transition: 0.3s linear;
-        &:hover {
-          background-color: #acacac;
-        }
-      }
-
-      
-      h2 {
-        margin-top: 10px;
-        margin-bottom: 0;
-      }
-      span {
-        font-size: 20px;
-      }
-
-      &:hover {
-        scale: 1.04;
-      }
-
-    }
-
+@media (min-width: 768px) {
+  .container {
+      width: 720px;
   }
 }
-
-
-footer {
-  background-color: var(--darkblue);
-  min-height: 50vh;
-}
-
-
-
-///////////////////////////////////////////////////////// media queries //////////////////////////////////////////////////////////
-
-@media (min-width: 500px) {
-  .products {
-    grid-template-columns: repeat(2, 1fr);
-
-    h2 {
-      font-size: 20px;
-    }
-
-  }
-}
-
-@media (min-width: 650px) {
-  header .text-area h1 {
-    line-height: 60px;
-  }
-
-}
-
-
 @media (min-width: 992px) {
-  header {
-    align-items: center;
-    flex-direction: row-reverse;
-    gap: 20px;
-
-    .text-area {
-      max-width: 50%;
-    }
-
-  }
-
-}
-
-@media (min-width: 1024px) {
-  .products {
-    grid-template-columns: repeat(3, 1fr);
-
+  .container {
+      width: 960px;
   }
 }
-
-
-@media (min-width: 1280px) {
-  .products {
-    grid-template-columns: repeat(4, 1fr);
-  
+@media (min-width: 1200px) {
+  .container {
+      width: 1140px;
   }
 }
 

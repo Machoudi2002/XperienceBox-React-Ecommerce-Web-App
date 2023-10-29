@@ -1,0 +1,141 @@
+footer {
+    background-color: var(--darkblue);
+  
+    .footer-body {
+      padding-top: 50px;
+      gap: 40px;
+      margin-bottom: 5vw;
+  
+      img {
+        margin-bottom: 10px;
+        width: 60%;
+      }
+  
+      .links {
+        display: flex;
+        flex-direction: column;
+        
+        h3 {
+          color: var(--orange);
+          font-family: 'Cinzel', serif;
+          font-size: 25px; 
+        }
+        ul {
+          padding-left: 0;
+          list-style: none;
+          li {
+            margin-bottom: 5px;
+
+            a {
+                font-family: 'Sanchez', serif;
+                font-weight: 600;
+                margin-bottom: 20px;
+                text-decoration: none;
+                color: var(--gray);
+                font-size: 16px;
+                transition: 0.2s ease-in-out;
+      
+                &:hover {
+                  color: var(--orange);
+                }
+              }
+
+          }
+  
+        }
+        
+  
+      }
+  
+      .newsLetter {
+        h3 {
+          color: var(--orange);
+          font-family: 'Cinzel', serif;
+          font-size: 25px; 
+        }
+        input {
+          margin: 10px 0;
+          padding: 10px;
+        }
+        input[type="submit"] {
+          color: var(--darkblue);
+          background-color: var(--orange);
+          border: solid 1px var(--orange);
+          font-weight: 700;
+          cursor: pointer;
+        }
+  
+        input[type="email"] {
+          font-weight: 600;
+  
+        }
+  
+      }
+  
+    }
+
+    .social-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          margin-right: 15px;
+          cursor: pointer;
+          width: 25px;
+          margin-top: 10px;
+
+        }
+      }
+  
+    .copyright {
+      text-align: center;
+      font-size: 13px;
+      font-family: 'Sanchez', serif;
+      padding: 15px 10px;
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    footer {
+        .footer-body {
+            img {
+
+                width: 50%;
+            }
+        }
+    }
+  }
+  
+  @media (min-width: 992px) {
+
+    footer {
+      .footer-body {
+        display: flex;
+        justify-content: space-between;
+  
+        img {
+            width: auto;
+          height: 100px;
+        }
+      }
+  
+    }
+  
+  }
+  
+  
+  @media (min-width: 1280px) {
+  
+    footer {
+      .footer-body {
+        img {
+          width: 25%;
+        }
+  
+      }
+  
+  }
+  }  
