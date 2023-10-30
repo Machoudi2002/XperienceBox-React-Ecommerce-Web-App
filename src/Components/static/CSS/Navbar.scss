@@ -1,0 +1,72 @@
+
+.navbar-body {
+    background-color: var(--darkblue);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index:1;
+    top: 0;
+
+    .nav-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .nav1 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+    
+            .logo {
+                width: 45px;
+                cursor: pointer;   
+            }
+
+            .products-link {
+                font-family: 'Sanchez', serif;
+                text-decoration: none;
+                color: white;
+                font-size: 18px;
+                transition: 0.3s ease-in-out;
+
+                &:hover {
+                    color: var(--orange);
+                }
+
+            }
+    
+        }
+
+        .nav2 {
+            display: flex;
+            gap: 13px;
+            img {
+                width: 25px;
+            }
+        }
+
+    }
+
+
+}
+
+
+@media (min-width: 768px) {
+
+    .navbar-body .nav-main .nav1 {
+        gap: 20px;
+
+        .logo {
+            width: 55px;
+        }
+
+        .products-link {
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            
+        }
+
+    } 
+
+}

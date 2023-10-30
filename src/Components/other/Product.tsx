@@ -1,3 +1,5 @@
+import addToCart from "../assets/icons/cart.png"
+
 interface ProductCard {
     name: string;
     price: number;
@@ -11,7 +13,7 @@ const Product = (props : ProductCard) => {
         <div className="product-img">
             <img src={props.imgURL} alt={props.name} width="100%" />
             <div className="content">
-              <img src="/icons/cart.png" alt="cart" />
+              <img src={addToCart} alt="cart" />
             </div>
         </div>
         <h2>{props.name}</h2>

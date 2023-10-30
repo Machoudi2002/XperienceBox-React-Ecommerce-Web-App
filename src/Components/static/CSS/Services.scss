@@ -5,10 +5,12 @@
 
     .services-container {
         color: var(--darkblue);
+        gap: 20px;
         .service {
             display: flex;
             gap: 15px;
             align-items: center;
+            margin-bottom: 10px;
 
             h3 {
                 font-family: 'Cinzel', serif;
@@ -29,6 +31,10 @@
     .services-container {
         display: flex;
         gap: 20px;
+
+        .service {
+            margin-bottom: 0px;
+        }
 
     }
 

@@ -1,24 +1,25 @@
 import Product from "./Product"
 import "./CSS/ProductSection.scss"
+import blueFlame from "../assets/Products_Images/BlueFlame.webp"
 
 const productInfo = [
     {
         name: "BlueFlame Instinct",
         price: 199,
-        imgURL: "/assets/Products_Images/BlueFlame.webp"
+        imgURL: blueFlame
     },
     {
         name: "BlueFlame Instinct",
         price: 199,
-        imgURL: "/assets/Products_Images/BlueFlame.webp"
+        imgURL: blueFlame
     },    {
         name: "BlueFlame Instinct",
         price: 199,
-        imgURL: "/assets/Products_Images/BlueFlame.webp"
+        imgURL: blueFlame
     },    {
         name: "BlueFlame Instinct",
         price: 199,
-        imgURL: "/assets/Products_Images/BlueFlame.webp"
+        imgURL: blueFlame
     },
 ]
 

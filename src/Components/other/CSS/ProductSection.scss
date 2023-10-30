@@ -1,17 +1,18 @@
 /////////////////////////////////////////////////////////// Features Products //////////////////////////////////////////////////////////////
 
 .product-section {
-    margin-bottom: 50px;
+  
     font-family: 'Cinzel', serif;
     h1 {
         text-align: center;
         font-size: 6vw;
-        margin: 30px 0;
+        margin-top: 30px;
     }
   
     .products {
+      
       display: grid;
-      gap: 20px;
+      gap: 30px;
   
       .product-card {
         cursor: pointer;
@@ -68,12 +69,21 @@
   
   ///////////////////////////////////////////////////////// media queries //////////////////////////////////////////////////////////
   
-  @media (min-width: 500px) {
+  @media (max-width: 576px) {
+    .products {
+      margin: 15vw 0;
+    }
+    
+  }
+  
+  @media (min-width: 576px) {
     .product-section h1 {
         font-size: 4vw;
     }
     .products {
+      margin: 8vw 0;
       grid-template-columns: repeat(2, 1fr);
+      
   
       h2 {
         font-size: 20px;
@@ -88,6 +98,7 @@
         font-size: 3vw;
     }
     .products {
+      margin: 5vw 0 8vw 0;
       grid-template-columns: repeat(3, 1fr);
   
     }
