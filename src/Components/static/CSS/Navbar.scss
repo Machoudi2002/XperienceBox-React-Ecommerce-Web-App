@@ -26,8 +26,9 @@
                 font-family: 'Sanchez', serif;
                 text-decoration: none;
                 color: white;
-                font-size: 18px;
+                font-size: 16px;
                 transition: 0.3s ease-in-out;
+                font-weight: 600;
 
                 &:hover {
                     color: var(--orange);
@@ -39,9 +40,10 @@
 
         .nav2 {
             display: flex;
-            gap: 13px;
-            img {
-                width: 25px;
+            gap: 10px;
+            .nav-icon {
+                font-size: 20px;
+                color: var(--orange);
             }
         }
 
@@ -53,20 +55,30 @@
 
 @media (min-width: 768px) {
 
-    .navbar-body .nav-main .nav1 {
-        gap: 20px;
+    .navbar-body .nav-main {
 
-        .logo {
-            width: 55px;
+        .nav1 {
+            gap: 20px;
+    
+            .logo {
+                width: 55px;
+            }
+    
+            .products-link {
+                font-size: 16px;
+                letter-spacing: 2px;
+                
+                
+            }
+    
+    
+        } 
+
+        .nav2 {
+            gap: 15px;
+
         }
 
-        .products-link {
-            font-size: 20px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            
-        }
-
-    } 
+    }
 
 }
