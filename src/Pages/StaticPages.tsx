@@ -29,7 +29,7 @@ const StaticPages = (props : {pageLink : string}) => {
       }, [props.pageLink]);
   return (
     <>
-        <div className="container spacing">
+        <div className="container markdownStyles">
             <Markdown>{page}</Markdown>
         </div>
     </>

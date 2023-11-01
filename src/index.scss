@@ -21,7 +21,7 @@
   margin-bottom: 15px;
 }
 
-.spacing {
+.markdownStyles {
   padding: 15vh 0;
   h1 {
     font-family: 'Cinzel', serif;
@@ -35,7 +35,12 @@
     font-family: 'Sanchez', serif;
     font-size: 15px;
     margin: 20px 0;
+  }
 
+  ul {
+    font-family: 'Sanchez', serif;
+    font-size: 15px;
+    list-style: square;
   }
 }
 
