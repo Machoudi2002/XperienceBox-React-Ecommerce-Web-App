@@ -14,7 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/TermsConditions" element={<StaticPages pageLink="TermsOfService" />} />
+        <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
         <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
       </Routes> 
       <Services />
