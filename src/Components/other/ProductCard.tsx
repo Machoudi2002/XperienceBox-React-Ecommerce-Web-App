@@ -1,4 +1,4 @@
-import addToCart from "../assets/icons/cart.png"
+import CartIcon from "../assets/icons/cart.png"
 
 interface ProductCard {
     name: string;
@@ -6,14 +6,14 @@ interface ProductCard {
     imgURL: string;
 }
 
-const Product = (props : ProductCard) => {
+const ProductCard = (props : ProductCard) => {
   return (
     <>
     <div className="product-card">
         <div className="product-img">
             <img src={props.imgURL} alt={props.name} width="100%" />
             <div className="content">
-              <img src={addToCart} alt="cart" />
+              <img src={CartIcon} alt="cart" />
             </div>
         </div>
         <h2>{props.name}</h2>
@@ -23,4 +23,4 @@ const Product = (props : ProductCard) => {
   )
 }
 
-export default Product
+export default ProductCard

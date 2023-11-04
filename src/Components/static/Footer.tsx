@@ -22,9 +22,9 @@ const Footer = () => {
                 <div className="links">
                   <h3>Support</h3>
                   <ul>
-                    <li><Link to=''>Contact Us</Link></li>
-                    <li><Link to=''>My Account</Link></li>
-                    <li><Link to=''>Track My Order</Link></li>
+                    <li><Link to='/ContactUs'>Contact Us</Link></li>
+                    <li><Link to='/Account'>My Account</Link></li>
+                    <li><a target="_blank" href="https://www.ordertracker.com/">Track My Order</a></li>
                   </ul>
                 </div>
                 <div className="newsLetter">
@@ -36,9 +36,9 @@ const Footer = () => {
                 </div>
             </div>
             <div className="social-buttons">
-                    <a href="#"><img src={facebook} alt="facebook" /></a>
-                    <a href="#"><img src={twitch} alt="twitch" /></a> 
-                    <a href="#"><img src={twitterX} alt="twitterX" /></a>
+                    <a target="_blank" href="https://web.facebook.com/CControllerzz/"><img src={facebook} alt="facebook" /></a>
+                    <a target="_blank" href="https://www.youtube.com/customcontrollerzz"><img src={twitch} alt="twitch" /></a> 
+                    <a target="_blank" href="https://twitter.com/ccontrollerzz"><img src={twitterX} alt="twitterX" /></a>
                     
             </div>
             <div className="copyright">

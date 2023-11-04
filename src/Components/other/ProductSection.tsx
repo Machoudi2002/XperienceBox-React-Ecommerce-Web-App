@@ -1,25 +1,34 @@
-import Product from "./Product"
+import ProductCard from "./ProductCard"
 import "./CSS/ProductSection.scss"
 import blueFlame from "../assets/Products_Images/BlueFlame.webp"
+import choesKnights from "../assets/Products_Images/ChoesKnight.webp"
+import bloodDragon from "../assets/Products_Images/BloodDragon.webp"
+import cyberPlague from "../assets/Products_Images/CyberPlague.webp"
 
 const productInfo = [
     {
-        name: "BlueFlame Instinct",
-        price: 199,
+        id: 1,
+        name: "BlueFlame",
+        price: 189,
         imgURL: blueFlame
     },
     {
-        name: "BlueFlame Instinct",
-        price: 199,
-        imgURL: blueFlame
-    },    {
-        name: "BlueFlame Instinct",
-        price: 199,
-        imgURL: blueFlame
-    },    {
-        name: "BlueFlame Instinct",
-        price: 199,
-        imgURL: blueFlame
+        id: 2,
+        name: "ChoesKnight",
+        price: 129,
+        imgURL: choesKnights
+    },    
+    {
+        id: 3,
+        name: "BloodDragon",
+        price: 299,
+        imgURL: bloodDragon
+    },    
+    {
+        id: 4,
+        name: "BlueFlame",
+        price: 99,
+        imgURL: cyberPlague
     },
 ]
 
@@ -31,13 +40,7 @@ const ProductSection = () => {
             <div className="products mt-5 mb-5">
                 {
                     productInfo.map((item, i) => (
-                        <Product key={i} name={item.name} price={item.price} imgURL={item.imgURL} />
-                        
-                    ))
-                }
-                                {
-                    productInfo.map((item, i) => (
-                        <Product key={i} name={item.name} price={item.price} imgURL={item.imgURL} />
+                        <ProductCard key={i} name={item.name} price={item.price} imgURL={item.imgURL} />
                         
                     ))
                 }

@@ -4,6 +4,7 @@ import Footer from "./Components/static/Footer";
 import Navbar from "./Components/static/NavBar";
 import Services from "./Components/static/Services";
 import StaticPages from "./Pages/StaticPages";
+import { ShoppingCartProvider } from "./Context/ShoppingCartContext";
 
 
 
@@ -12,14 +13,16 @@ function App() {
 
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
-        <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
-      </Routes> 
-      <Services />
-      <Footer />
-      <Navbar />
+      <ShoppingCartProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
+          <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
+        </Routes> 
+        <Services />
+        <Footer />
+        <Navbar />
+      </ShoppingCartProvider>
     </>
   )
 }
