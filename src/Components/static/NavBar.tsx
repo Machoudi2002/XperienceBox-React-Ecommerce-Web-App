@@ -3,10 +3,12 @@ import navLogo from "../assets/Logos/1.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 import './CSS/Navbar.scss'
+import { useShoppingCart } from '../../Context/ShoppingCartContext'
 
 
 const Navbar = () => {
 
+  const { cartQuantity } = useShoppingCart()
 
   return (
     <>
@@ -18,7 +20,12 @@ const Navbar = () => {
                 </div>
                 <div className="nav2">
                   <NavLink to="/Account"><FontAwesomeIcon className='nav-icon' icon={faUser} /></NavLink>
-                  <NavLink to="/Cart"><FontAwesomeIcon className='nav-icon' icon={faCartShopping} /></NavLink>
+                  <NavLink to="/Cart" className="cart">
+                    <FontAwesomeIcon className='nav-icon' icon={faCartShopping} /> 
+                    {
+                      cartQuantity > 0 && <span className='cartItemsNum'>{cartQuantity}</span>
+                    }
+                  </NavLink>
                 </div>
           </nav>
         </div>

@@ -5,6 +5,7 @@ import Navbar from "./Components/static/NavBar";
 import Services from "./Components/static/Services";
 import StaticPages from "./Pages/StaticPages";
 import { ShoppingCartProvider } from "./Context/ShoppingCartContext";
+import Cart from "./Components/other/Cart";
 
 
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
           <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
+          <Route path="/Cart" element={<Cart />} />
         </Routes> 
         <Services />
         <Footer />

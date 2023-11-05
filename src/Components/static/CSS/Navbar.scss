@@ -40,10 +40,30 @@
 
         .nav2 {
             display: flex;
-            gap: 10px;
+            gap: 5px;
             .nav-icon {
                 font-size: 20px;
                 color: var(--orange);
+                padding: 8px;
+                padding-left: 0;
+            }
+            .cart {
+                position: relative;
+
+                .cartItemsNum {
+                    position: absolute;
+                    color: white;
+                    font-size: 11px;
+                    background-color: red;
+                    padding: 1px 5px; 
+                    border-radius: 50%;
+                    top: 0;
+                    font-weight: 600;
+                    right: 0;
+                    font-family: 'Sanchez', serif;
+
+
+                }
             }
         }
 
