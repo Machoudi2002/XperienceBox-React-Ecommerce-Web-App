@@ -15,7 +15,7 @@
     .item-info {
 
         .text-area {
-            h2 {
+            h3 {
                 font-family: 'Cinzel', serif;
                 font-size: 18px
             }
@@ -38,33 +38,38 @@
             gap: 8px;
             margin: 15px 0;
 
-            input {
-                width: 40px;
-                height: 40px;
-            }
 
             button {
                 font-size: 20px;
                 text-align: center;
                 padding: 7px 15px;
-                color: var(--orange);
+                color: var(--darkblue);
                 font-weight: 600;
-                background: var(--darkblue);
+                background: var(--gray);
                 border: none;
                 border-radius: 2px;
                 font-family: 'Sanchez', serif;
                 cursor: pointer;
+                transition: ease-in-out 0.3s;
+
+                &:hover {
+                    color: var(--orange);
+                    background-color: var(--darkblue);
+                }
             }
 
             .remove {
 
-                background: var(--darkblue);
                 border: none;
                 border-radius: 2px;
                 font-family: 'Sanchez', serif;
                 cursor: pointer;
                 font-size: 15px;
                 padding: 10px 15px;
+                &:hover {
+                    color: white;
+                    background-color: red;
+                }
             }
         }
     }
@@ -73,11 +78,24 @@
 
 @media (max-width: 992px) {
 
-    .img-back {
-        width: 40%;
+    .itemCard {
+        .img-back {
+            width: 40%;
+            
+            img {
+                width: 100%;
+            }
+        }
         
-        img {
-            width: 100%;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    .itemCard {
+        .item-info .text-area h3 {
+            font-size: 25px;
         }
     }
 
@@ -85,10 +103,15 @@
 
 @media (min-width: 992px) {
 
-    .img-back {
-        img {
-            width: 180px;
+    .itemCard {
+
+        .img-back {
+            img {
+                width: 180px;
+            }
+    
         }
+
     }
 
 }

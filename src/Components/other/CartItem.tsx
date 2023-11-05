@@ -55,7 +55,7 @@ const CartItem = ({id, quantity} : CartItemProps) => {
             </div>
             <div className="item-info">
                 <div className="text-area">
-                    <h2>{item.name}</h2>
+                    <h3>{item.name}</h3>
                     <p>{item.price}$ { quantity > 1 && (<span> x{quantity}</span>)}</p>
                 </div>
                 <div className="selectQuantity">
