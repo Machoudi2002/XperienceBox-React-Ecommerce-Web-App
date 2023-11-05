@@ -1,36 +1,6 @@
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 
-import blueFlame from "../assets/Products_Images/BlueFlame.webp"
-import choesKnights from "../assets/Products_Images/ChoesKnight.webp"
-import bloodDragon from "../assets/Products_Images/BloodDragon.webp"
-import cyberPlague from "../assets/Products_Images/CyberPlague.webp"
-
-const productInfo = [
-    {
-        id: 1,
-        name: "BlueFlame",
-        price: 189,
-        imgURL: blueFlame
-    },
-    {
-        id: 2,
-        name: "ChoesKnight",
-        price: 129,
-        imgURL: choesKnights
-    },    
-    {
-        id: 3,
-        name: "BloodDragon",
-        price: 299,
-        imgURL: bloodDragon
-    },    
-    {
-        id: 4,
-        name: "CyberPlague",
-        price: 99,
-        imgURL: cyberPlague
-    },
-]
+import CartItem from "./CartItem";
 
 const Cart = () => {
     const { cartItems } = useShoppingCart();
@@ -40,6 +10,17 @@ const Cart = () => {
         <div className="container spacing">
             <div className="shoppingCart">
                 <h1>My Cart</h1>
+                {
+                    cartItems.length > 0 ? (
+
+                        cartItems.map((item) => (
+                            <CartItem key={item.id} {...item} />
+                        ))
+                    ) : 
+                    <p style={{marginTop: "20px", fontSize: "15px", fontFamily: 'Sanchez' }}>
+                        your cart is empty   
+                    </p>
+                }
 
 
 

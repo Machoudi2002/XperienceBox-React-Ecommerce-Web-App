@@ -1,4 +1,4 @@
-import "./CSS/Header.scss"
+import "./SCSS/Header.scss"
 
 
 interface headerComp {

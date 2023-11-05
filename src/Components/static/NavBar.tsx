@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import navLogo from "../assets/Logos/1.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons'
-import './CSS/Navbar.scss'
+import './SCSS/Navbar.scss'
 import { useShoppingCart } from '../../Context/ShoppingCartContext'
 
 

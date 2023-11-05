@@ -1,0 +1,94 @@
+.itemCard {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+
+    .img-back {
+        background-color: var(--gray);
+        border-radius: 5px;
+        img {
+            padding: 5px;
+        }
+
+    }
+
+    .item-info {
+
+        .text-area {
+            h2 {
+                font-family: 'Cinzel', serif;
+                font-size: 18px
+            }
+            p {
+                font-family: 'Cinzel', serif;
+                font-size: 18px;
+
+                span {
+                    font-family: 'Sanchez', serif;
+                    font-weight: 400;
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+        .selectQuantity {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 15px 0;
+
+            input {
+                width: 40px;
+                height: 40px;
+            }
+
+            button {
+                font-size: 20px;
+                text-align: center;
+                padding: 7px 15px;
+                color: var(--orange);
+                font-weight: 600;
+                background: var(--darkblue);
+                border: none;
+                border-radius: 2px;
+                font-family: 'Sanchez', serif;
+                cursor: pointer;
+            }
+
+            .remove {
+
+                background: var(--darkblue);
+                border: none;
+                border-radius: 2px;
+                font-family: 'Sanchez', serif;
+                cursor: pointer;
+                font-size: 15px;
+                padding: 10px 15px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .img-back {
+        width: 40%;
+        
+        img {
+            width: 100%;
+        }
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    .img-back {
+        img {
+            width: 180px;
+        }
+    }
+
+}

@@ -1,5 +1,5 @@
 import ProductCard from "./ProductCard"
-import "./CSS/ProductSection.scss"
+import "./SCSS/ProductSection.scss"
 import blueFlame from "../assets/Products_Images/BlueFlame.webp"
 import choesKnights from "../assets/Products_Images/ChoesKnight.webp"
 import bloodDragon from "../assets/Products_Images/BloodDragon.webp"

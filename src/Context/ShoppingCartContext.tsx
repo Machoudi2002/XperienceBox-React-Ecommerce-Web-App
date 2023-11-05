@@ -9,6 +9,7 @@ type ShoppingCartContext = {
     addProductQuantity: (id: number) => void;
     minusProductQuantity: (id: number) => void;
     removeFromCart: (id: number) => void;
+    addBySelectedQuantity: (id: number, quantity: number) => void;
     cartQuantity: number;
     cartItems: CartItem[];
 }
@@ -32,6 +33,7 @@ export function ShoppingCartProvider({ children } : ShoppingCartProviderProps) {
     const getProductQuantity = (id: number) => {
         return cartItems.find(item => item.id === id)?.quantity || 0;
     }
+
     const addProductQuantity = (id: number) => {
         setCartItems(currItems => {
             if (cartItems.find(item => item.id === id) == null) {
@@ -40,6 +42,22 @@ export function ShoppingCartProvider({ children } : ShoppingCartProviderProps) {
                 return currItems.map(item => {
                     if (item.id == id) {
                         return {...item, quantity: item.quantity + 1}
+                    } else {
+                        return item
+                    }
+                })
+            }
+        })
+    }
+
+    const addBySelectedQuantity = (id: number, quantity: number) => {
+        setCartItems(currItems => {
+            if (cartItems.find(item => item.id === id) == null) {
+                return [...currItems, {id, quantity: 1}]
+            } else {
+                return currItems.map(item => {
+                    if (item.id == id) {
+                        return {...item, quantity: item.quantity + quantity}
                     } else {
                         return item
                     }
@@ -76,6 +94,7 @@ export function ShoppingCartProvider({ children } : ShoppingCartProviderProps) {
             addProductQuantity,
             minusProductQuantity,
             removeFromCart,
+            addBySelectedQuantity,
             cartQuantity,
             cartItems,
         }}>

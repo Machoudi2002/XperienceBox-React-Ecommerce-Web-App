@@ -1,4 +1,4 @@
-import "./CSS/Services.scss"
+import "./SCSS/Services.scss"
 import shipping from "../assets/icons/shipping.png"
 import payment from "../assets/icons/payment.png"
 import satisfaction from "../assets/icons/satisfaction.png"

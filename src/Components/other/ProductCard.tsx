@@ -14,7 +14,7 @@ const ProductCard = (props : ProductCard) => {
 
   const addToCart = () => {
     addProductQuantity(props.id);
-    console.log(`${props.name} = ${quantity}`);
+    console.log(`${props.name} = ${quantity + 1}`);
   }
   
   
