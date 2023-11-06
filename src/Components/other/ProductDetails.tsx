@@ -1,19 +1,25 @@
 import { FormEvent, useState } from "react";
+import { useShoppingCart } from "../../Context/ShoppingCartContext";
+
 
 interface Product {
     id: number;
     name: string;
-    description: string;
+    description?: string;
     price: number;
     imgURL: string;
-    stock: number;
+    stock?: number;
 }
 
 const ProductDetails = (props : Product) => {
+    
     const [quantity, setQuantity] = useState(1);
+    const { addProductQuantity } = useShoppingCart();
+
 
     const handleSubmit = (e : FormEvent) => {
         e.preventDefault();
+        addProductQuantity(props.id, quantity);
     }
 
   return (

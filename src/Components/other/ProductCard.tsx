@@ -1,27 +1,29 @@
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import CartIcon from "../assets/icons/cart.png"
+import { useNavigate } from "react-router-dom";
 
 interface ProductCard {
     id: number;
     name: string;
     price: number;
     imgURL: string;
+    Link: string;
 }
 
 const ProductCard = (props : ProductCard) => {
-  const { getProductQuantity , addProductQuantity } = useShoppingCart()
-  const quantity = getProductQuantity(props.id)
+  const { addProductQuantity } = useShoppingCart()
+  
+  let navigate = useNavigate()
 
   const addToCart = () => {
-    addProductQuantity(props.id);
-    console.log(`${props.name} = ${quantity + 1}`);
+    addProductQuantity(props.id, 1);
   }
   
   
   return (
     <>
-    <div className="product-card" data-id={props.id}>
-        <div className="product-img">
+    <div className="product-card" data-id={props.id} onClick={() => navigate(`Products/${props.Link}`)}>
+        <div className="product-img" >
             <img src={props.imgURL} alt={props.name} width="100%" />
             <div className="content">
               <img onClick={addToCart} src={CartIcon} alt="cart" />

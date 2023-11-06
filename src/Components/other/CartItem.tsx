@@ -1,44 +1,16 @@
-import blueFlame from "../assets/Products_Images/BlueFlame.webp"
-import choesKnights from "../assets/Products_Images/ChoesKnight.webp"
-import bloodDragon from "../assets/Products_Images/BloodDragon.webp"
-import cyberPlague from "../assets/Products_Images/CyberPlague.webp"
-import "./SCSS/CartItem.scss"
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { useShoppingCart } from "../../Context/ShoppingCartContext"
+import { Link } from 'react-router-dom'
+import { productInfo } from './ProductList'
+import "./SCSS/CartItem.scss"
+
 
 type CartItemProps = {
     id: number,
     quantity: number,
 }
 
-const productInfo = [
-    {
-        id: 1,
-        name: "BlueFlame",
-        price: 189,
-        imgURL: blueFlame
-    },
-    {
-        id: 2,
-        name: "ChoesKnight",
-        price: 129,
-        imgURL: choesKnights
-    },    
-    {
-        id: 3,
-        name: "BloodDragon",
-        price: 299,
-        imgURL: bloodDragon
-    },    
-    {
-        id: 4,
-        name: "CyberPlague",
-        price: 99,
-        imgURL: cyberPlague
-    },
-]
 
 
 const CartItem = ({id, quantity} : CartItemProps) => {
@@ -50,9 +22,9 @@ const CartItem = ({id, quantity} : CartItemProps) => {
   return (
     <>
         <div className="itemCard">
-            <div className="img-back">
+            <Link to={`/Products/${item.name}`} className="img-back">
                 <img src={item.imgURL} alt={item.name} />
-            </div>
+            </Link>
             <div className="item-info">
                 <div className="text-area">
                     <h3>{item.name}</h3>
@@ -60,7 +32,7 @@ const CartItem = ({id, quantity} : CartItemProps) => {
                 </div>
                 <div className="selectQuantity">
                     <button onClick={() => minusProductQuantity(item.id)}>-</button>
-                    <button onClick={() => addProductQuantity(item.id)}>+</button>
+                    <button onClick={() => addProductQuantity(item.id, 1)}>+</button>
                     <button onClick={() => removeFromCart(item.id)} className="remove"><FontAwesomeIcon icon={faTrash} /></button>
                 </div>
             </div>
