@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import navLogo from "../assets/Logos/1.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartShopping, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBasketShopping, faUser } from '@fortawesome/free-solid-svg-icons'
 import './SCSS/Navbar.scss'
 import { useShoppingCart } from '../../Context/ShoppingCartContext'
 
@@ -21,7 +21,7 @@ const Navbar = () => {
                 <div className="nav2">
                   <NavLink to="/Account"><FontAwesomeIcon className='nav-icon' icon={faUser} /></NavLink>
                   <NavLink to="/Cart" className="cart">
-                    <FontAwesomeIcon className='nav-icon' icon={faCartShopping} /> 
+                    <FontAwesomeIcon className='nav-icon' icon={faBasketShopping} /> 
                     {
                       cartQuantity > 0 && <span className='cartItemsNum'>{cartQuantity}</span>
                     }

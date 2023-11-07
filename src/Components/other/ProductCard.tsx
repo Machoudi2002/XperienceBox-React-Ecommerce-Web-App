@@ -1,6 +1,6 @@
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCartPlus, faEye } from '@fortawesome/free-solid-svg-icons'
+import { faBasketShopping, faEye } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
 
 interface ProductCard {
@@ -27,7 +27,7 @@ const ProductCard = (props : ProductCard) => {
         <div className="product-img" >
             <img src={props.imgURL} alt={props.name} width="100%" />
             <div className="content">
-              <FontAwesomeIcon className="icon" icon={faCartPlus} onClick={addToCart}/>
+              <FontAwesomeIcon className="icon" icon={faBasketShopping} onClick={addToCart}/>
               <FontAwesomeIcon className="icon" icon={faEye} onClick={() => navigate(`Products/${props.Link}`)} />
             </div>
         </div>

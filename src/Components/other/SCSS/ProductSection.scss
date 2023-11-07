@@ -15,7 +15,6 @@
       gap: 30px;
   
       .product-card {
-        cursor: pointer;
         transition: 300ms ease-in-out;
         .product-img {
           
@@ -34,18 +33,25 @@
             flex-direction: column;
             transition: 0.1s linear;
             gap: 5px;
+            margin-top: 20px;
 
             &:hover {
               opacity: 1;
             }
 
             .icon {
-              font-size: 16px;
-              padding: 11px 9px;
+              font-size: 18px;
+              padding: 13px 12px;
               margin-right: 10px;
               background-color: var(--darkblue);
               border-radius: 50%;
-              color: var(--orange);
+              color: white;
+              cursor: pointer;
+              transition: 0.2s linear;
+
+              &:hover {
+                color: var(--orange);
+              }
 
   
             }
