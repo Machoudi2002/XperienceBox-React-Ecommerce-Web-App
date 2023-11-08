@@ -1,24 +1,23 @@
+import React from "react";
 import { FormEvent, useState } from "react";
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import "./SCSS/ProductDetails.scss"
 
 
-interface Product {
+type ProductTypes = {
     id: number;
     name: string;
-    description?: string;
     price: number;
     imgURL: string;
-    stock?: number;
 }
 
-const ProductDetails = (props : Product) => {
+const ProductDetails: React.FC<ProductTypes> = (props) => {
     
     const [quantity, setQuantity] = useState(1);
     const { addProductQuantity } = useShoppingCart();
 
     if (quantity < 0) {
-        return setQuantity(0)
+        setQuantity(0);
     }
 
 
@@ -35,7 +34,6 @@ const ProductDetails = (props : Product) => {
             </div>
             <div className="text-area">
                 <h1>{props.name}</h1>
-                <p>{props.description}</p>
                 <span>{props.price}$</span>
                 <form onSubmit={handleSubmit}>
                     <div className="controllQuantity">
@@ -44,7 +42,7 @@ const ProductDetails = (props : Product) => {
                             className="quantityField"
                             type="number"
                             min={1}
-                            max={props.stock}
+                            max={100}
                             value={quantity}
                             onChange={(e) => setQuantity(Number(e.target.value))}
                         />

@@ -10,13 +10,13 @@ const ProductPage = () => {
   const { productName } = useParams<Params>();
   const Product = productInfo.find(item => item.name === productName)
   return (
-    <>
+    <div>
         {
-          Product && (
+          Product ? (
             <ProductDetails id={Product.id} name={Product.name} price={Product.price} imgURL={Product.imgURL} />
-          )
+          ) : <div>Product not found</div>
         } 
-    </>
+    </div>
   )
 }
 
