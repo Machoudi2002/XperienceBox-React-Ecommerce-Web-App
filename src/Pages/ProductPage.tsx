@@ -8,17 +8,14 @@ type Params = {
 
 const ProductPage = () => {
   const { productName } = useParams<Params>();
-  console.log(productName);
   const Product = productInfo.find(item => item.name === productName)
   return (
     <>
-    {
-      Product && (
-        <ProductDetails id={Product.id} name={Product.name} price={Product.price} imgURL={Product.imgURL} />
-      )
-    }
-      
-    
+        {
+          Product && (
+            <ProductDetails id={Product.id} name={Product.name} price={Product.price} imgURL={Product.imgURL} />
+          )
+        } 
     </>
   )
 }

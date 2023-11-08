@@ -1,0 +1,54 @@
+.productDetails {
+    padding: 9vh 0;
+
+    .img-area {
+        
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-area {
+        padding: 10px;
+        h1 {
+            font-family: 'Cinzel', serif;
+        }
+
+        form {
+
+            .controllQuantity {
+                margin-top: 10px;
+                font-weight: 600;
+
+                .quantityField {
+                    width: 50px;
+                    text-align: center;
+                }
+                .quantityField::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                  }
+                input {
+                    padding: 10px 12px;
+                    margin-right: 5px;
+                    
+                }
+
+                input[type="button"] {
+                    cursor: pointer;
+                }
+
+            }
+
+            input[type="submit"] {
+                margin-top: 10px;
+                font-size: 17px;
+                padding: 12px 0;
+                width: 100%;
+                cursor: pointer;
+            }
+        }
+    }
+
+
+}
