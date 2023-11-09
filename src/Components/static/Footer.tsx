@@ -4,8 +4,12 @@ import facebook from "../assets/icons/facebook.svg";
 import twitch from "../assets/icons/twitch.svg";
 import twitterX from "../assets/icons/twitterX.svg";
 import footerLogo from "../assets/Logos/3.png"
+import { FormEvent } from "react";
 
 const Footer = () => {
+  const handleNewletterSubmit = (e : FormEvent) => {
+    e.preventDefault();
+  }
   return (
     <>
         <footer>
@@ -29,7 +33,7 @@ const Footer = () => {
                 </div>
                 <div className="newsLetter">
                   <h3>Newsletter</h3>
-                  <form>
+                  <form onSubmit={handleNewletterSubmit}>
                     <input type="email" placeholder="Email" required/>
                     <input type="submit" value="Subscribe" />
                   </form>

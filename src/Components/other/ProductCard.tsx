@@ -27,8 +27,8 @@ const ProductCard = (props : ProductCard) => {
         <div className="product-img" >
             <img src={props.imgURL} alt={props.name} width="100%" />
             <div className="content">
-              <FontAwesomeIcon className="icon" icon={faBasketShopping} onClick={addToCart}/>
-              <FontAwesomeIcon className="icon" icon={faEye} onClick={() => navigate(`Products/${props.Link}`)} />
+              <abbr title="Add To Basket"><FontAwesomeIcon className="icon" icon={faBasketShopping} onClick={addToCart}/></abbr>
+              <abbr title="Show Product"><FontAwesomeIcon className="icon" icon={faEye} onClick={() => navigate(`Products/${props.Link}`)} /></abbr>
             </div>
         </div>
         <div>

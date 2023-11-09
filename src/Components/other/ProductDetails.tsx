@@ -1,4 +1,3 @@
-import React from "react";
 import { FormEvent, useState } from "react";
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import "./SCSS/ProductDetails.scss"
@@ -11,7 +10,7 @@ type ProductTypes = {
     imgURL: string;
 }
 
-const ProductDetails: React.FC<ProductTypes> = (props) => {
+const ProductDetails = (props : ProductTypes) => {
     
     const [quantity, setQuantity] = useState(1);
     const { addProductQuantity } = useShoppingCart();

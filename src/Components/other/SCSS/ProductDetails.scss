@@ -14,6 +14,11 @@
             font-family: 'Cinzel', serif;
         }
 
+        span {
+            font-weight: 600;
+            font-size: 20px;
+        }
+
         form {
 
             .controllQuantity {
@@ -50,5 +55,19 @@
         }
     }
 
+
+}
+
+@media (min-width: 992px) {
+    .productDetails {
+        padding: 12vh 0;
+        display: flex;
+        gap: 30px;
+        align-items: center;
+        
+        .img-area {
+            width: 55%;
+        }
+    }
 
 }
