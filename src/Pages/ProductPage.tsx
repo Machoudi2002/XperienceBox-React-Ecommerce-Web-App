@@ -13,7 +13,14 @@ const ProductPage = () => {
     <div>
         {
           Product ? (
-            <ProductDetails id={Product.id} name={Product.name} price={Product.price} imgURL={Product.imgURL} />
+            <ProductDetails 
+              id={Product.id} 
+              name={Product.name} 
+              price={Product.price} 
+              stock={Product.stock}
+              imgURL={Product.imgURL} 
+              description={Product.description} 
+            />
           ) : <div>Product not found</div>
         } 
     </div>
