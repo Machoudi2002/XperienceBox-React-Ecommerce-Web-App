@@ -1,28 +1,15 @@
+
 .shoppingCart {
+    
+    hr {
+        margin: 10px 0;
+    }
 
     .cart-body {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        font-family: 'Crimson Text', serif;
-
-    }
-}
-
-
-@media (min-width: 992px) {
-    .shoppingCart {
-
-        .cart-body {
-            flex-direction: row;
-            justify-content: space-between;
-
-            .cartItems {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
+        .cartItems {
+            display: grid;
+            gap: 10px;
         }
-
     }
+
 }

@@ -11,6 +11,7 @@ const Cart = () => {
         <div className="container spacing">
             <div className="shoppingCart">
                 <h1>My Cart</h1>
+                <hr></hr>
                 <div className="cart-body" >
                     <div className="cartItems">
 

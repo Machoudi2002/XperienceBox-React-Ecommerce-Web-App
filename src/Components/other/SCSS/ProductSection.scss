@@ -58,15 +58,18 @@
           }
           
         }
-  
-        
-        h2 {
-          margin-top: 10px;
-          margin-bottom: 0;
-          letter-spacing: 1px;
-        }
-        span {
-          font-size: 20px;
+
+        .name-price {
+          text-align: center;
+          h2 {
+            margin-top: 10px;
+            margin-bottom: 0;
+            letter-spacing: 1px;
+          }
+          span {
+            font-size: 20px;
+          }
+
         }
   
         &:hover {

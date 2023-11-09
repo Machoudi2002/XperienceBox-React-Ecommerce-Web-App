@@ -31,7 +31,7 @@ const ProductCard = (props : ProductCard) => {
               <abbr title="Show Product"><FontAwesomeIcon className="icon" icon={faEye} onClick={() => navigate(`Products/${props.Link}`)} /></abbr>
             </div>
         </div>
-        <div>
+        <div className="name-price">
           <h2>{props.name}</h2>
           <span>{props.price}$</span>
         </div>
