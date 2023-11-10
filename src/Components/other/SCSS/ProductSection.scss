@@ -17,7 +17,6 @@
       .product-card {
         transition: 300ms ease-in-out;
         .product-img {
-          
           position: relative;
           .content {
             width: 100%;
@@ -61,8 +60,8 @@
 
         .name-price {
           text-align: center;
+          
           h2 {
-            margin-top: 10px;
             margin-bottom: 0;
             letter-spacing: 1px;
           }
