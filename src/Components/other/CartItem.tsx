@@ -36,8 +36,8 @@ const CartItem = ({id, quantity} : CartItemProps) => {
                         <button onClick={() => minusProductQuantity(item.id)}>-</button>
                         <span>{quantity}</span>
                         <button onClick={() => addProductQuantity(item.id, 1)} disabled={(stockCalcul === 0)}>+</button>
-                        <button className='trash'>
-                            <FontAwesomeIcon onClick={() => removeFromCart(item.id)} className="remove" icon={faTrash} />
+                        <button className='trash' onClick={() => removeFromCart(item.id)}>
+                            <FontAwesomeIcon className="remove" icon={faTrash} />
                             Remove
                         </button>
                     </div>
