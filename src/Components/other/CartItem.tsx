@@ -33,7 +33,7 @@ const CartItem = ({id, quantity} : CartItemProps) => {
                     <p>total = {item.price * quantity}$</p>
 
                     <div className="controllQuantity">
-                        <button onClick={() => minusProductQuantity(item.id)}>-</button>
+                        <button onClick={() => minusProductQuantity(item.id)} disabled={(quantity === 1)}>-</button>
                         <span>{quantity}</span>
                         <button onClick={() => addProductQuantity(item.id, 1)} disabled={(stockCalcul === 0)}>+</button>
                         <button className='trash' onClick={() => removeFromCart(item.id)}>
