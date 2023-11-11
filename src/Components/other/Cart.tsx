@@ -30,12 +30,24 @@ const Cart = () => {
                     </div>
 
                     <div className="total">
-                        <h2>Total : {cartItems.reduce((total, cartItem) => {
-                            const item = productInfo.find(item => item.id === cartItem.id)
-                            return total + (item?.price || 0) * cartItem.quantity
-                        }, 0)}$
-
-                        </h2>
+                        <h2>Summary</h2>
+                        <div className="checkout-card">
+                            <div className="subtotal">
+                                <span>Subtotal</span>
+                                <span>
+                                    {cartItems.reduce((total, cartItem) => {
+                                    const item = productInfo.find(item => item.id === cartItem.id)
+                                    return total + (item?.price || 0) * cartItem.quantity}
+                                    , 0)}$
+                                </span>
+                            </div>
+                            <p>Shipping & taxes are calculated at checkout</p>
+                            <div className="checkoutMethods">
+                                <button>Checkout</button>
+                                <button>Paypal</button>
+                                <button>30 Days Return Policy</button>
+                            </div>
+                        </div>
                     </div>
                     
                 </div>
