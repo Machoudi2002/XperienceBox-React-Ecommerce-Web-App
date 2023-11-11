@@ -85,3 +85,25 @@
     }
     
 }
+
+@media (min-width: 576px) {
+    .itemCard .itemInfo {
+        gap: 15px;
+
+        .text-area {
+            margin-top: 5px;
+    
+            h3 {
+                font-size: 25px;
+            }
+
+            p {
+                margin: 5px 0;
+            }
+    
+        }
+
+    }
+    
+    
+}

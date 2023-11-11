@@ -18,7 +18,7 @@ const CartItem = ({id, quantity} : CartItemProps) => {
 
     const item = productInfo.find(item => item.id === id)
     if (item == null) return null
-    const stockCalcul =  item.stock - getProductQuantity(item.id);
+    const availableStock =  item.stock - getProductQuantity(item.id);
 
 
   return (
@@ -35,7 +35,7 @@ const CartItem = ({id, quantity} : CartItemProps) => {
                     <div className="controllQuantity">
                         <button onClick={() => minusProductQuantity(item.id)} disabled={(quantity === 1)}>-</button>
                         <span>{quantity}</span>
-                        <button onClick={() => addProductQuantity(item.id, 1)} disabled={(stockCalcul === 0)}>+</button>
+                        <button onClick={() => addProductQuantity(item.id, 1)} disabled={(availableStock <= 0)}>+</button>
                         <button className='trash' onClick={() => removeFromCart(item.id)}>
                             <FontAwesomeIcon className="remove" icon={faTrash} />
                             Remove

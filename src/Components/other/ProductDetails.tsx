@@ -19,14 +19,14 @@ const ProductDetails = (props : ProductTypes) => {
     const { addProductQuantity, getProductQuantity } = useShoppingCart();
     
 
-    const stockCalcul = props.stock - getProductQuantity(props.id);
+    const availableStock = props.stock - getProductQuantity(props.id);
 
     const handleQuantityChange = (newQuantity: number) => {
         if (newQuantity < 2) {
           setQuantity(1);
           setErrorMessage("You hit the minimum Quantity");
-        } else if (newQuantity >= stockCalcul) {
-          setQuantity(stockCalcul);
+        } else if (newQuantity >= availableStock) {
+          setQuantity(availableStock);
           setErrorMessage("You hit the maximum Quantity");
         } else {
           setQuantity(newQuantity);
@@ -41,7 +41,7 @@ const ProductDetails = (props : ProductTypes) => {
     }
 
     useEffect(() => {
-        (stockCalcul === 0) ? setErrorMessage("out of stock") : null
+        (availableStock === 0) ? setErrorMessage("out of stock") : null
     }, [])
 
   return (
@@ -54,25 +54,25 @@ const ProductDetails = (props : ProductTypes) => {
                 <h1>{props.name}</h1>
                 <p>{props.description}</p>
                 <span>{props.price}$</span>
-                <span className="stock">stock : {stockCalcul}</span>
+                <span className="stock">stock : {availableStock}</span>
                 <form onSubmit={handleSubmit}>
                     <div className="controllQuantity">
-                        <input type="button" value="+" onClick={() => handleQuantityChange(quantity + 1)} disabled={(stockCalcul === 0)} />
+                        <input type="button" value="+" onClick={() => handleQuantityChange(quantity + 1)} disabled={(availableStock === 0)} />
                         <input
                             className="quantityField"
                             type="number"
                             min={1}
-                            max={stockCalcul}
-                            value={(stockCalcul === 0) ? 0 : quantity}
+                            max={availableStock}
+                            value={(availableStock === 0) ? 0 : quantity}
                             onChange={(e) => handleQuantityChange(Number(e.target.value))}
                         />
-                        <input type="button" value="-" onClick={() => handleQuantityChange(quantity - 1)} disabled={(stockCalcul === 0)} />
+                        <input type="button" value="-" onClick={() => handleQuantityChange(quantity - 1)} disabled={(availableStock === 0)} />
                         <p className="errorMessage">
-                            {(quantity === 1 || quantity === stockCalcul) ? errorMessage : (stockCalcul === 0) && "out of stock"}
+                            {(quantity === 1 || quantity === availableStock) ? errorMessage : (availableStock === 0) && "out of stock"}
                         </p>
 
                     </div>
-                    <input type="submit" value="Add To Cart" disabled={(stockCalcul === 0)} /> 
+                    <input type="submit" value="Add To Cart" disabled={(availableStock === 0)} /> 
                     
                 </form>
             </div>

@@ -38,6 +38,15 @@
               opacity: 1;
             }
 
+            .emptyStock {
+              background-color: red;
+              color: white;
+
+              &:hover {
+                color: white;
+              }
+            }
+
             .icon {
               font-size: 18px;
               padding: 13px 12px;

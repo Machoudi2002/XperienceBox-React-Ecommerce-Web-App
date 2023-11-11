@@ -2,22 +2,34 @@ import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBasketShopping, faEye } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
+import { productInfo } from "./ProductList";
+
 
 interface ProductCard {
     id: number;
     name: string;
     price: number;
     imgURL: string;
+    stock: number;
     Link: string;
 }
 
 const ProductCard = (props : ProductCard) => {
-  const { addProductQuantity } = useShoppingCart()
-  
-  let navigate = useNavigate()
+  let navigate = useNavigate();
+  const { addProductQuantity, getProductQuantity } = useShoppingCart();
+
+  const item = productInfo.find(item => item.id === props.id)
+  if (item == null) return null
+  const availableStock =  item.stock - getProductQuantity(item.id);
+
+
 
   const addToCart = () => {
-    addProductQuantity(props.id, 1);
+    if (availableStock === 0) {
+      addProductQuantity(props.id, 0);
+    } else {
+      addProductQuantity(props.id, 1);
+    }
   }
   
   
