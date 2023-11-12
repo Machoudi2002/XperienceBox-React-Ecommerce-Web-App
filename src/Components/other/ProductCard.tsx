@@ -10,7 +10,6 @@ interface ProductCard {
     name: string;
     price: number;
     imgURL: string;
-    stock: number;
     Link: string;
 }
 
