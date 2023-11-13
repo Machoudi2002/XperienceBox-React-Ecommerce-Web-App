@@ -8,7 +8,6 @@ const Cart = () => {
     
   return (
     <>
-        <div className="container spacing">
             <div className="shoppingCart">
                 <h1>My Cart</h1>
                 <hr></hr>
@@ -53,7 +52,6 @@ const Cart = () => {
                 </div>
 
             </div>
-        </div>
     </>
   )
 }

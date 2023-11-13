@@ -1,0 +1,151 @@
+
+.login-register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+        font-family: 'Crimson Text', serif;
+        color: var(--darkblue);
+        font-size: clamp(32px, 4vw, 48px);
+        margin-top: 20px;
+    }
+    p {
+        font-family: 'Sanchez', serif;
+        font-size: 13px;
+        margin: 7px 0 20px 0;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 600;
+        color: rgba(128, 128, 128, 0.741);
+        letter-spacing: 0.5px;
+
+    }
+
+    form {
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 15px;
+    
+            label {
+                font-family: 'Sanchez', serif;
+                font-size: 14px;
+            }
+            input {
+                padding: 10px ;
+                font-family: 'Sanchez', serif;
+                font-size: 14px;
+                min-width: 260px;
+            }
+    
+        }
+        input[type="submit"] {
+            color: var(--orange);
+            background-color: var(--darkblue);
+            font-weight: 600;
+            padding: 13px;
+            border: none;
+            width: 100%;
+            font-family: 'Sanchez', serif;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+    }
+
+    button {
+        
+        background-color: var(--darkblue);
+        font-weight: 600;
+        padding: 13px;
+        border: none;
+        width: 100%;
+        font-family: 'Sanchez', serif;
+        width: 260px;
+        cursor: pointer;
+        border-radius: 2px;
+        color: var(--orange);
+        
+        a {
+            text-decoration: none;
+            color: var(--orange);
+        }
+    }
+
+    a {
+        text-decoration: none;
+        margin-top: 13px;
+    }
+
+    span {
+        font-family: 'Sanchez', serif;
+        font-size: 13px;
+        padding: 0 10px;
+        text-align: center;
+        font-weight: 600;
+        color: rgba(128, 128, 128, 0.741);
+        letter-spacing: 0.5px;
+        margin-top: 15px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+
+
+
+}
+
+@media (min-width: 375px) {
+
+    .login-register {
+
+        form {
+            input {
+                min-width: 320px;
+            }
+        } 
+
+        button {
+            width: 320px;
+        }
+
+    }
+
+}
+
+@media (min-width: 576px) {
+    .login-register {
+
+        form {
+            input {
+                min-width: 300px;
+            }
+        } 
+
+        button {
+            width: 300px;
+        }
+
+    } 
+}
+
+@media (min-width: 768px) {
+    .login-register {
+
+        form {
+            input {
+                min-width: 370px;
+            }
+        } 
+
+        button {
+            width: 370px;
+        }
+
+    } 
+}
+
