@@ -22,8 +22,10 @@ const StaticPages = (props : {pageLink : string}) => {
     useEffect(() => {
         if (props.pageLink === "PrivacyPolicy") {
             fetchMarkdown("https://raw.githubusercontent.com/Machoudi2002/XperienceBox-React-Ecommerce-Web-App/main/src/Markdown/PrivacyPolicy.md")
-        } else {
+        } if (props.pageLink === "TermsOfService") {
             fetchMarkdown("https://raw.githubusercontent.com/Machoudi2002/XperienceBox-React-Ecommerce-Web-App/main/src/Markdown/TermsConditions.md")
+        } else {
+            fetchMarkdown("https://raw.githubusercontent.com/Machoudi2002/XperienceBox-React-Ecommerce-Web-App/main/src/Markdown/ReturnPolicy.md")
         }
 
       }, [props.pageLink]);
