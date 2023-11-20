@@ -10,29 +10,57 @@ import ProductPage from "./Pages/ProductPage";
 import Account from "./Pages/Account";
 import Login from "./Components/other/Login";
 import Register from "./Components/other/Register";
+import { useState, useEffect } from "react";
 
 
 
 
 function App() {
 
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const handleDocumentStateChange = () => {
+      if (document.readyState !== 'complete') {
+        setLoading(true);
+      } else {
+        setLoading(false);
+      }
+    };
+
+    document.addEventListener('readystatechange', handleDocumentStateChange);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      document.removeEventListener('readystatechange', handleDocumentStateChange);
+    };
+  }, []);
+
   return (
     <>
-      <ShoppingCartProvider>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
-          <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
-          <Route path="/Cart" element={<CartPage />} />
-          <Route path="/Account" element={<Account />} />
-          <Route path="/Account/Login" element={<Login/>} />
-          <Route path="/Account/Register" element={<Register/>} />
-          <Route path="/Products/:productName" element={<ProductPage />} />
-        </Routes> 
-        <Services />
-        <Footer />
-        <Navbar />
-      </ShoppingCartProvider>
+      {
+        loading ? (
+          <h1>Loading...</h1>
+        ) : 
+        (
+          <ShoppingCartProvider>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
+              <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
+              <Route path="/Cart" element={<CartPage />} />
+              <Route path="/Account" element={<Account />} />
+              <Route path="/Account/Login" element={<Login/>} />
+              <Route path="/Account/Register" element={<Register/>} />
+              <Route path="/Products/:productName" element={<ProductPage />} />
+            </Routes> 
+            <Services />
+            <Footer />
+            <Navbar />
+          </ShoppingCartProvider>
+        )
+      }
+
     </>
   )
 }

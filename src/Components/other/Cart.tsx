@@ -8,9 +8,9 @@ const Cart = () => {
     
   return (
     <>
-            <div className="shoppingCart">
+            <div className="shoppingCart pageName">
                 <h1>My Cart</h1>
-                <hr></hr>
+                <hr />
                 <div className="cart-body" >
                     <div className="cartItems">
 

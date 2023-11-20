@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom"
 
-
+import UserAccount from "../Components/other/userAccount"
+import Orders from "../Components/other/Orders"
 
 
 const Account = () => {
 
   return (
-    <div className="container spacing">
+    <div className="container spacing pageName">
 
-       <h1>Account page</h1> 
-       <Link to="/Account/Login">Login</Link>
+       <h1>Account</h1>
+       <hr />
+       <UserAccount />
+       <Orders />
 
     </div>
   )

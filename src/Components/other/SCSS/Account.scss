@@ -1,0 +1,40 @@
+
+.card {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    font-family: var(--para);
+
+    h2 {
+        margin-bottom: 5px;
+        font-family: var(--subheading);
+    }
+
+    button {
+        margin-top: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        background-color: var(--darkblue);
+        border: none;
+        color: var(--orange);
+        font-weight: bold;
+        border-radius: 2px;
+        font-family: var(--subheading);
+        letter-spacing: 0.8px;
+        cursor: pointer;
+    }
+
+}
+
+.logout {
+    margin-top: 28px;
+    a {
+        padding: 10px 20px;
+        background-color: var(--gray);
+        color: var(--darkblue);
+        text-decoration: none;
+        border-radius: 3px;
+        box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.1);
+    }
+}

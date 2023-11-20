@@ -1,12 +1,5 @@
-
 .shoppingCart {
-    
-    hr {
-        margin: 10px 0 20px 0;
-        color: rgba(0, 0, 0, 0.548);
-        opacity: 0.4;
-        
-    }
+
 
     .cart-body {
 
@@ -22,15 +15,14 @@
                 .subtotal {
                     display: flex;
                     justify-content: space-between;
-                    font-family: 'Crimson Text', serif;
+                    font-family: var(--subheading);
                     font-weight: 600;
                     font-size: 20px;
-                    
                 }
 
                 p {
                     color: rgba(128, 128, 128, 0.658);
-                    font-family: 'Sanchez', serif;
+                    font-family: var(--para);
                     font-size: 12px;
                     font-weight: 600;
                     letter-spacing: 0.5px;
@@ -45,7 +37,7 @@
                     button {
                         padding: 10px;
                         border: none;
-                        font-family: 'Cinzel', serif;
+                        font-family: var(--mainheading);
                         font-size: 18px;
                         font-weight: 600;
                         border-radius: 5px;
@@ -66,10 +58,7 @@
             }
         }
     }
-
 }
-
-
 
 @media (min-width : 992px) {
     .cart-body {

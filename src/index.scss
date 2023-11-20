@@ -2,13 +2,25 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  
 }
 
 :root {
   --darkblue: #14213d;
   --gray: #e5e5e5;
   --orange: #fca311;
+  --mainheading: 'Cinzel', serif;
+  --subheading: 'Crimson Text', serif;
+  --para: 'Sanchez', serif;
+}
+
+hr {
+  margin: 10px 0 20px 0;
+  color: rgba(0, 0, 0, 0.548);
+  opacity: 0.4;
+}
+
+.pageName {
+  font-family: var(--mainheading);
 }
 
 .swiper-pagination-bullet-active {
@@ -28,22 +40,22 @@
 .markdownStyles {
   padding: 12vh 0;
   h1 {
-    font-family: 'Cinzel', serif;
+    font-family: var(--mainheading);
     margin: 10px 0;
     font-size: clamp(2rem, 0.125rem + 6vw, 3.5rem);
   }
   h2, h3 {
     margin: 15px 0;
-    font-family: 'Cinzel', serif;
+    font-family: var(--mainheading);
   }
   p {
-    font-family: 'Sanchez', serif;
+    font-family: var(--para);
     font-size: 15px;
     margin: 20px 0;
   }
 
   ul {
-    font-family: 'Sanchez', serif;
+    font-family: var(--para);
     font-size: 15px;
     list-style: square;
     margin: 0 15px;
@@ -54,9 +66,6 @@
   }
 }
 
-
-
-
 .container {
   width: 100%;
   padding-right: 15px;
@@ -64,6 +73,7 @@
   margin-right: auto;
   margin-left: auto;
 } 
+
 @media (min-width: 576px) {
   .container {
       width: 540px;
@@ -76,12 +86,13 @@
     padding: 15vh 0;
   }
 }
+
 @media (min-width: 768px) {
   .container {
       width: 720px;
   }
-
 }
+
 @media (min-width: 992px) {
   .container {
       width: 960px;
@@ -95,11 +106,9 @@
     padding: 18vh 0;
   }
 }
+
 @media (min-width: 1200px) {
   .container {
       width: 1140px;
   }
 }
-
-
-

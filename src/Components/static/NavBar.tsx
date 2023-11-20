@@ -16,7 +16,6 @@ const Navbar = () => {
           <nav className='container nav-main'>
                 <div className='nav1'>
                   <NavLink to="/"><img src={navLogo} alt="logo" width="60px" className='logo' /></NavLink>
-                  <NavLink to="/Products" className="products-link">Browse All</NavLink>
                 </div>
                 <div className="nav2">
                   <NavLink to="/Account"><FontAwesomeIcon className='nav-icon' icon={faUser} /></NavLink>
