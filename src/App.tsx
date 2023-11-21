@@ -10,6 +10,7 @@ import ProductPage from "./Pages/ProductPage";
 import Account from "./Pages/Account";
 import Login from "./Components/other/Login";
 import Register from "./Components/other/Register";
+import Loading from "./Components/other/Loading";
 import { useState, useEffect } from "react";
 
 
@@ -24,7 +25,10 @@ function App() {
       if (document.readyState !== 'complete') {
         setLoading(true);
       } else {
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false)
+        }, 1000)
+        ;
       }
     };
 
@@ -40,7 +44,7 @@ function App() {
     <>
       {
         loading ? (
-          <h1>Loading...</h1>
+          <Loading />
         ) : 
         (
           <ShoppingCartProvider>
