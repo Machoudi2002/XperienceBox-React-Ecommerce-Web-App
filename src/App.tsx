@@ -1,17 +1,19 @@
-import { Routes, Route } from "react-router-dom"
-import Home from "./Pages/Home"
+import { useState, useEffect, lazy, Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import { ShoppingCartProvider } from "./Context/ShoppingCartContext";
 import Footer from "./Components/static/Footer";
 import Navbar from "./Components/static/NavBar";
 import Services from "./Components/static/Services";
-import StaticPages from "./Pages/StaticPages";
-import { ShoppingCartProvider } from "./Context/ShoppingCartContext";
-import CartPage from "./Pages/CartPage";
-import ProductPage from "./Pages/ProductPage";
-import Account from "./Pages/Account";
-import Login from "./Components/other/Login";
-import Register from "./Components/other/Register";
 import Loading from "./Components/other/Loading";
-import { useState, useEffect } from "react";
+
+const Home = lazy(() => import("./Pages/Home"));
+const StaticPages = lazy(() => import("./Pages/StaticPages"));
+const CartPage = lazy(() => import("./Pages/CartPage"));
+const ProductPage = lazy(() => import("./Pages/ProductPage"));
+const Account = lazy(() => import("./Pages/Account"));
+const Login = lazy(() => import("./Components/other/Login"));
+const Register = lazy(() => import("./Components/other/Register"));
+
 
 
 
@@ -48,6 +50,7 @@ function App() {
         ) : 
         (
           <ShoppingCartProvider>
+            <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
@@ -59,6 +62,7 @@ function App() {
               <Route path="/Account/Register" element={<Register/>} />
               <Route path="/Products/:productName" element={<ProductPage />} />
             </Routes> 
+            </Suspense>
             <Services />
             <Footer />
             <Navbar />
