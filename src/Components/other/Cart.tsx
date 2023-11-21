@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import CartItem from "./CartItem";
 import { productInfo } from "./ProductList";
@@ -43,7 +43,7 @@ const Cart = () => {
                             </div>
                             <p>Shipping & taxes are calculated at checkout</p>
                             <div className="checkoutMethods">
-                                <button>Checkout</button>
+                                <Link to="/Checkout"><button disabled={cartItems.length === 0}>Checkout</button></Link>
                             </div>
                         </div>
                     </div>
