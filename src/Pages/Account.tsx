@@ -1,5 +1,5 @@
 
-import UserAccount from "../Components/other/userAccount"
+import UserAccount from "../Components/other/UserAccount"
 import Orders from "../Components/other/Orders"
 
 
