@@ -1,3 +1,4 @@
+
 import { useShoppingCart } from "../../Context/ShoppingCartContext";
 import CartItem from "./CartItem";
 import { productInfo } from "./ProductList";
@@ -43,8 +44,6 @@ const Cart = () => {
                             <p>Shipping & taxes are calculated at checkout</p>
                             <div className="checkoutMethods">
                                 <button>Checkout</button>
-                                <button>Paypal</button>
-                                <button>30 Days Return Policy</button>
                             </div>
                         </div>
                     </div>

@@ -48,6 +48,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/TermsOfService" element={<StaticPages pageLink="TermsOfService" />} />
               <Route path="/PrivacyPolicy" element={<StaticPages pageLink="PrivacyPolicy" />} />
+              <Route path="/ReturnPolicy" element={<StaticPages pageLink="ReturnPolicy" />} />
               <Route path="/Cart" element={<CartPage />} />
               <Route path="/Account" element={<Account />} />
               <Route path="/Account/Login" element={<Login/>} />
