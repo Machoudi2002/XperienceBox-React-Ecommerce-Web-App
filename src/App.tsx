@@ -5,8 +5,8 @@ import Footer from "./Components/static/Footer";
 import Navbar from "./Components/static/NavBar";
 import Services from "./Components/static/Services";
 import Loading from "./Components/other/Loading";
+import Home from "./Pages/Home";
 
-const Home = lazy(() => import("./Pages/Home"));
 const StaticPages = lazy(() => import("./Pages/StaticPages"));
 const CartPage = lazy(() => import("./Pages/CartPage"));
 const ProductPage = lazy(() => import("./Pages/ProductPage"));
