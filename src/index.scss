@@ -13,6 +13,12 @@
   --para: 'Sanchez', serif;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 hr {
   margin: 10px 0 20px 0;
   color: rgba(0, 0, 0, 0.548);
@@ -91,6 +97,15 @@ hr {
   .container {
       width: 720px;
   }
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 50px;
+
+  }
+
 }
 
 @media (min-width: 992px) {
