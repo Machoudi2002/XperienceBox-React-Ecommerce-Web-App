@@ -19,6 +19,7 @@ const ShippingForm = () => {
                 type="text"
                 id="firstname"
                 defaultValue="John"
+                required
                 />
             </label>
             <label className="field">
@@ -30,6 +31,7 @@ const ShippingForm = () => {
                 type="text"
                 id="lastname"
                 defaultValue="Doe"
+                required
                 />
             </label>
             </div>
@@ -53,13 +55,13 @@ const ShippingForm = () => {
                 <span className="field__label" >
                 Zip code
                 </span>
-                <input className="field__input" type="text" id="zipcode" />
+                <input className="field__input" type="text" id="zipcode" required />
             </label>
             <label className="field">
                 <span className="field__label" >
                 City
                 </span>
-                <input className="field__input" type="text" id="city" />
+                <input className="field__input" type="text" id="city" required />
             </label>
             <label className="field">
                 <span className="field__label" >
@@ -69,8 +71,9 @@ const ShippingForm = () => {
                 <option value="" />
                 </select>
             </label>
+            <input className="button" type="submit" value="submit"></input>
             </div>
-            <button className="button">Submit</button>
+            
         </form>
         <hr />
         
