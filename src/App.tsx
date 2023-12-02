@@ -6,7 +6,7 @@ import Navbar from "./Components/static/NavBar";
 import Services from "./Components/static/Services";
 import Loading from "./Components/other/Loading";
 
-const Home = lazy(() => import("./Pages/Home");
+const Home = lazy(() => import("./Pages/Home"));
 const StaticPages = lazy(() => import("./Pages/StaticPages"));
 const CartPage = lazy(() => import("./Pages/CartPage"));
 const ProductPage = lazy(() => import("./Pages/ProductPage"));
